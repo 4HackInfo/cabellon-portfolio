@@ -1,0 +1,218 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cabellon Portfolio</title>
+    <link rel="stylesheet" href="css/portfolio.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- HEADER -->
+        <header class="header">
+            <div class="logo">Cabellon.dev</div>
+
+            <button class="hamburger" id="hamburger"
+                    aria-label="Toggle navigation"
+                    aria-expanded="false"
+                    aria-controls="nav">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="nav" id="nav">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </header>
+
+        <!-- HOME -->
+        <section id="home" class="home">
+            <div class="home-text">
+                <h1>Front-End Developer 👋</h1>
+
+                <p>
+                    Hi, I'm <strong>Eugene Cabellon</strong>.
+                    A passionate front-ends web developer who loves
+                    building clean and interactive websites.
+                </p>
+
+                <div class="socials">
+    <a href="https://github.com/Eugene589"
+       target="_blank"
+       rel="noopener noreferrer">
+        GitHub
+    </a>
+
+    <a href="https://www.facebook.com/cabelloneugenejr"
+       target="_blank"
+       rel="noopener noreferrer">
+        Facebook
+    </a>
+
+    <a href="https://www.roblox.com/users/173871324/profile"
+       target="_blank"
+       rel="noopener noreferrer">
+        Roblox
+    </a>
+</div>
+            </div>
+
+            <div class="home-img">
+                <img src="Eugene.png" alt="Profile Picture">
+            </div>
+        </section>
+
+        <!-- ABOUT -->
+        <section id="about" class="about">
+            <h2>About Me</h2>
+
+            <p>
+                I am a web developer and Roblox game developer focused on creating
+    great web experiences and interactive games. Designing and coding
+    have been my passion since I started working with computers.
+    I enjoy building websites, developing Roblox games using Roblox
+    Studio and Lua scripting, and turning creative ideas into simple,
+    beautiful, and engaging digital experiences.
+            </p>
+        </section>
+
+        <!-- SKILLS -->
+        <section id="skills" class="skills">
+            <h2>Skills</h2>
+
+            <div class="skills-grid">
+                <div>HTML</div>
+                <div>CSS</div>
+                <div>JavaScript</div>
+                <div>RobloxStudio</div>
+                <div>Figma</div>
+            </div>
+        </section>
+
+        <!-- PROJECTS -->
+        <section id="projects" class="projects">
+            <h2>Projects</h2>
+
+            <div class="project-list">
+
+                <!-- PROJECT ONE -->
+                <div class="project">
+                    <h3>Project One</h3>
+                    <p>A simple web app built using HTML, CSS, and JS.</p>
+
+                    <div class="project-img">
+                        <a href="lakbay/index.html" target="_blank"
+                           rel="noopener noreferrer">
+                            <img src="project1.png"
+                                 alt="Project One Screenshot">
+                        </a>
+                    </div>
+                </div>
+
+                <!-- PROJECT TWO -->
+            <div class="project">
+    <h3>Project Two - Roblox Studio</h3>
+    <p>
+        A Roblox game called Bomb the Brainrots, featuring
+        interactive gameplay and custom mechanics.
+    </p>
+
+    <div class="project-img">
+        <img src="project2.png"
+             alt="Bomb the Brainrots Roblox Game">
+    </div>
+
+    <a href="https://www.roblox.com/games/123813146468258/BOMB-THE-BRAINROTS"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="btn play-btn">
+        Play Game
+    </a>
+</div>
+
+                <!-- PROJECT THREE -->
+                <div class="project">
+                    <h3>Project Three</h3>
+                    <p>
+                        A modern web app with dynamic content and
+                        interactive UI features.
+                    </p>
+
+                    <div class="project-img">
+                        <img src="project3.png"
+                             alt="Project Three Screenshot">
+                    </div>
+                </div>
+
+                <!-- PROJECT FOUR -->
+                <div class="project">
+    <h3>Project Four - Hari ng Dama</h3>
+    <p>
+        A Filipino checkers game developed using Roblox Studio,
+        featuring interactive gameplay and custom mechanics.
+    </p>
+
+    <div class="project-img">
+        <img src="project4.jpg"
+             alt="Hari ng Dama Roblox Game">
+    </div>
+
+    <a href="https://www.roblox.com/games/110756190153550/Hari-ng-Dama"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="btn play-btn">
+        Play Game
+    </a>
+</div>
+        </section>
+
+        <!-- CONTACT -->
+        <section id="contact" class="contact">
+            <h2>Contact</h2>
+            <p>Let's build something together!</p>
+
+            <a href="mailto:eugenecabellon@email.com" class="btn">
+                Say Hello
+            </a>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="footer">
+            <p>© 2026 Eugene Cabellon. All rights reserved.</p>
+        </footer>
+
+    </div>
+
+    <!-- MOBILE NAVIGATION -->
+    <script src="js/script.js"></script>
+
+    <script>
+        const hamburger = document.getElementById("hamburger");
+        const nav = document.getElementById("nav");
+
+        hamburger.addEventListener("click", function () {
+            const isOpen = nav.classList.toggle("active");
+
+            hamburger.classList.toggle("open", isOpen);
+            hamburger.setAttribute("aria-expanded", isOpen);
+        });
+
+        nav.querySelectorAll("a").forEach(function (link) {
+            link.addEventListener("click", function () {
+                nav.classList.remove("active");
+                hamburger.classList.remove("open");
+                hamburger.setAttribute("aria-expanded", "false");
+            });
+        });
+    </script>
+
+</body>
+</html>

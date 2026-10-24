@@ -1,0 +1,296 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial;
+  flex-direction: column;
+  min-height: 100vh;
+  display: flex;
+}
+
+        /*    header   */
+header {
+  background-color: #5F95FF;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+}
+
+.logo img {
+  height: 65px;
+}
+
+.lakbay {
+  margin-left: 10px;
+  font-size: 45px;
+  font-weight: bold;
+}
+.lakbay a {
+  text-decoration: none;
+  color: #ffffff;
+} 
+
+        /*  nav    */
+nav ul {
+  list-style-type: none;
+  display: flex;
+}
+
+nav ul li {
+  margin-right: 40px;
+  margin-top: 5px;
+}
+
+nav ul li:last-child {
+  margin-right: 5px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  color: #333;
+}
+
+.sticky-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+              /* res Nav */
+@media screen and (max-width: 800px) {
+  nav ul {
+    display: none;
+  }
+
+  .menu-toggle {
+    cursor: pointer;
+  }
+
+  .menu-toggle .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin-top: 5px;
+    transition:0.3s ease-in-out;
+  }
+
+  .menu-toggle.open .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+
+  .menu-toggle.open .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-toggle.open .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+
+  .menu-toggle.open + nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.98);
+  }
+
+  nav ul {
+    padding: 10px;
+  }
+
+  nav ul li {
+    margin-right: 20px;
+    margin-top: 10px;
+  }
+
+  nav ul li:last-child {
+    margin-right: 0;
+  }
+
+  nav ul li a {
+    text-decoration: none;
+    color: rgb(95, 149, 255);
+    font-weight: bold;
+    font-size: 20px;
+  }
+
+  nav ul li a:hover {
+    color: #333;
+  }
+}
+
+
+        /*  container history   */
+.container {
+  padding: 20px;
+  margin-top: 50px;
+  flex: 1;
+}
+
+.history {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.history h1 {
+  color: #062476;
+  font-size: 24px;
+  margin-bottom: 20px;
+  margin-top: 50px;
+}
+
+.history p {
+  color: #6C78C7;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+
+        /*    images    */
+.image img {
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+
+        /*    video    */
+.video {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.video h2 {
+  color: #062476;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.video p {
+  color: #6C78C7;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.video-owner {
+  color: #FF8C00;
+}
+
+.mp4 {
+  width: 100%;
+  max-width: 800px;
+  margin-top: 30px;
+  border-radius: 10px;
+}
+
+/* p, 3images, hoverscale,  video,  */
+@media screen and (min-width: 1000px) {
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .history {
+    flex-basis: 50%;
+    padding-right: 20px;
+  }
+
+  .images {
+    flex-basis: 50%;
+    display: flex;
+  }
+
+  .image {
+    margin: 0px;
+    margin-right:2px;
+}
+
+.image img {
+    height: 200px;
+    border-radius: 20px;
+    margin-top: 150px;
+}
+
+.image:hover img {
+    transform: scale(1.40);
+    transition: 0.3s ease-in-out;
+}
+
+  .video {
+    flex-basis: 100%;
+    margin-top: 20px;
+  }
+  
+}
+
+        /*    footer    */
+.footer {
+  background-color: #5383dc;
+  padding: 50px;
+  color: white;
+}
+
+.footer-content {
+  display: flex;
+}
+.contact-info a{
+  font-size: 20px;
+  margin-top: 10px;
+  text-decoration: none;
+  color: white;
+}
+.contact-info, .about-us {
+  flex-basis: 48%;
+}
+
+.contact-info h3, .about-us h3 {
+  color: #fff;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.contact-info div, .about-us p {
+  margin-bottom: 10px;
+}
+
+.footer-text {
+  margin-top: 20px;
+  text-align: center;
+}
+
+
+/*     footer  resnp.  cp           */
+@media screen and (max-width: 600px) {
+  .footer-content {
+    flex-direction: column;
+  }
+  
+  .contact-info, .about-us {
+    margin-bottom: 20px;
+  }
+  
+  .contact-info a{
+   color: white;
+ }
+}
